@@ -1,4 +1,4 @@
-const socket = io("https://youtube-api-weld.vercel.app/");
+const socket = io("http://localhost:3000");
 var tag = document.createElement("script");
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -33,7 +33,6 @@ var tag = document.createElement("script");
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
 
 function onPlayerStateChange({ target, data }) {
   if (data === YT.PlayerState.PLAYING) {
