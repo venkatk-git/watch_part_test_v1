@@ -33,7 +33,7 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-const socket = io("http://localhost:3000");
+const socket = io("https://youtube-api-weld.vercel.app/");
 
 function onPlayerStateChange({ target, data }) {
   if (data === YT.PlayerState.PLAYING) {
